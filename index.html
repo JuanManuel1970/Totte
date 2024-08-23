@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Datos Persistente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gestión de Pendientes EL TOTTE</h1>
+    
+    <form id="dataForm">
+        <input type="date" id="fechaInput" required>
+        <input type="text" id="clienteInput" placeholder="Cliente" required>
+        <input type="text" id="ddtInput" placeholder="Número de DDT (9 dígitos)" required pattern="\d{9}" maxlength="9">
+        <input type="number" id="importeInput" placeholder="Importe" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable('fecha')">Fecha</th>
+                <th onclick="sortTable('cliente')">Cliente</th>
+                <th onclick="sortTable('ddt')">Número de DDT</th>
+                <th onclick="sortTable('importe')">Importe</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se agregarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <button id="clearAllBtn">Borrar Todo</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
